@@ -38,6 +38,7 @@ int main (){
 
     while (n != 0 && n != 1){
         puntos += n;
+        cout<<"-> Acumulado: "<< puntos << endl; 
         n = rango0_6();
 
     }
