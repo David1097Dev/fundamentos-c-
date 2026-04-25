@@ -50,7 +50,7 @@ string calculoHexagesimal(int n){
         residuo = n%16;
 
         if (residuo<10){
-            conversion = to_string(residuo) + conversion;
+            conversion = (char)residuo + conversion;
             
         }
         if (residuo >=10){
