@@ -48,15 +48,8 @@ string calculoHexagesimal(int n){
     int residuo = 0;
     do{
         residuo = n%16;
+        conversion = caracteres[residuo] + conversion;
 
-        if (residuo<10){
-            conversion = (char)residuo + conversion;
-            
-        }
-        if (residuo >=10){
-            conversion = caracteres[residuo] + conversion;
-
-        }
         n = n /16;    
     }while (n > 0);
     cout<<conversion<<endl;

@@ -33,19 +33,22 @@ int evaluarSeguridad (string contraseña){
     if (mayusculas > 0){
         numeroCriteriosCumplidos++;
     }
+    if (numeros > 0){
+    numeroCriteriosCumplidos++;
+    }
     return numeroCriteriosCumplidos;
 }
 int main (){
     string contraseña = obtenerContraseña();
     int nivelSeguridad = evaluarSeguridad(contraseña); 
     cout<<"Nivel de seguridad : ";
-    if (nivelSeguridad == 1){
-        cout<<"Bajo"<<endl;
-    }
-    else if (nivelSeguridad == 2){
+    if (nivelSeguridad >= 2 && nivelSeguridad != 4){
         cout<<"Medio"<<endl;
     }
+    else if (nivelSeguridad == 4){
+        cout<<"fuerte"<<endl;
+    }
     else {
-        cout<<"Alto"<<endl;
+        cout<<"bajo"<<endl;
     }
 }
